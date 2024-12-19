@@ -1,26 +1,25 @@
 # Вариант 22.
 # 1. Дано трехзначное число. Проверить истинность высказывания: «Цифры данного
 # числа образуют возрастающую последовательность».
-a = input("Введите целое трехзначное число: ")
-while type(a) != int:
-    try:
-            a = int(a)
-    except ValueError:
 
-        print("Неправильно ввели!")
-        a = input("Введите трехзначное число: ")
+try:
 
-num1 = a // 100
-num2 = a % 100 // 10
-num3 = a % 100 % 10
+    a = int(input("Введите целое трехзначное число: "))
 
-if num1 < num2 < num3:
-    print("true")
+    num1 = a // 100
+    num2 = a % 100 // 10
+    num3 = a % 100 % 10
 
-else:
-    print("false")
+    if num1 < num2 < num3:
 
+        print("true")
 
+    else:
+        print("false")
+
+except ValueError:
+
+    print("Неправильно ввели!")
 
 
 
