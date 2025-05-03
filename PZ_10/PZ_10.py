@@ -9,8 +9,14 @@ vtoroy = {'картошка', 'морковь', 'помидоры'}
 
 tretiy = {'картошка', 'морковь', 'свекла', 'огурцы'}
 
-perviy ^= vtoroy ^ tretiy
+
+print("Культуры которые есть во всех колхозах:")
+print(perviy & vtoroy & tretiy)
 
 
+print("Культуры которые есть только в некоторых колхозах:")
+print(perviy - vtoroy)
+print(vtoroy - perviy)
+print(tretiy - vtoroy)
 
-print(perviy)
+
